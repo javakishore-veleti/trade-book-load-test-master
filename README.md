@@ -2,7 +2,7 @@
 
 ## Overview
 
-Welcome to the **Trade Book Load Test Master (using AWS Native Services)** repository. This central hub contains documentation, guidelines, and links to all repositories associated with the load testing of the Trade Book CRUD API services. The project includes multiple components developed in Java and .NET, utilizing various tools and technologies, leveraging AWS native services, to ensure a comprehensive and effective load testing strategy.
+Welcome to the **Trade Book Load Test Master (using AWS Native Services)** repository. This central hub contains documentation, guidelines, and links to all repositories associated with the load testing of the Trade Book CRUD API services. The project includes multiple components developed in Java and .NET, utilizing various tools and technologies, and AWS native services to ensure a comprehensive and effective load-testing strategy.
 
 ## Project Architecture
 
@@ -21,7 +21,7 @@ The architecture for the load testing setup is designed to evaluate the performa
 4. **Monitoring and Logging**:
    - Real-time monitoring using AWS CloudWatch, Grafana dashboards, and ELK Stack for comprehensive visibility into performance metrics.
 
-### Architecture Diagram
+### Updated Architecture Diagram
 
 ![Architecture Diagram](TradeBookCrudAPI-With-LoadTesting.png)
 
@@ -69,6 +69,10 @@ The Infrastructure repository provides infrastructure-as-code (IaC) configuratio
 
 This repository contains configurations and scripts for monitoring the load testing environment. It includes setups for AWS CloudWatch, Grafana dashboards, and ELK Stack to capture real-time performance metrics, log management, and alerting during load testing.
 
+### 7. [trade-book-load-test-db-mgmt](https://github.com/javakishore-veleti/trade-book-load-test-db-mgmt)
+
+The trade-book-load-test-db-mgmt repository is dedicated to managing database schema changes and migrations using Liquibase for the Trade Book CRUD API load testing environment. It includes Liquibase configuration files, changelogs, and scripts to ensure consistent and version-controlled updates to the PostgreSQL database schema across different environments.
+
 ## How to Use This Project
 
 1. **Clone Repositories**: Start by cloning each repository to your local environment.
@@ -79,5 +83,7 @@ This repository contains configurations and scripts for monitoring the load test
 
 4. **Run Load Tests**: Utilize the JMeter scripts in the `trade-book-load-test-jmeter` repository to run load tests against the deployed services.
 
-5. **Monitor Performance**: Monitor the performance and logs using configurations from the `trade-book-load-test-monitoring` repository.
+5. **Manage Database Schema**: Use the `trade-book-load-test-db-mgmt` repository to manage and apply database schema changes using Liquibase.
+
+6. **Monitor Performance**: Monitor the performance and logs using configurations from the `trade-book-load-test-monitoring` repository.
 
