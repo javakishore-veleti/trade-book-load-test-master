@@ -81,14 +81,3 @@ This repository contains configurations and scripts for monitoring the load test
 
 5. **Monitor Performance**: Monitor the performance and logs using configurations from the `trade-book-load-test-monitoring` repository.
 
-## Contributing
-
-We welcome contributions to enhance the project. Please follow the guidelines provided in the `CONTRIBUTING.md` file for submitting pull requests, reporting issues, or providing feedback.
-
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for more details.
-
-## Contact
-
-For any questions or support, please reach out to [your email] or open an issue in the respective repository.
