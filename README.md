@@ -2,7 +2,7 @@
 
 ## Overview
 
-Welcome to the **Trade Book Load Test Master Using AWS Native Services** repository. This central hub contains documentation, guidelines, and links to all repositories associated with the load testing of the Trade Book CRUD API services. The project includes multiple components developed in Java or .NET or Python Django or NodeJS, utilizing various tools and technologies, including AWS native services, to ensure a comprehensive and effective load testing strategy.
+Welcome to the **Trade Book Load Test Master (using AWS Native Services)** repository. This central hub contains documentation, guidelines, and links to all repositories associated with the load testing of the Trade Book CRUD API services. The project includes multiple components developed in Java and .NET, utilizing various tools and technologies, leveraging AWS native services, to ensure a comprehensive and effective load testing strategy.
 
 ## Project Architecture
 
@@ -21,7 +21,25 @@ The architecture for the load testing setup is designed to evaluate the performa
 4. **Monitoring and Logging**:
    - Real-time monitoring using AWS CloudWatch, Grafana dashboards, and ELK Stack for comprehensive visibility into performance metrics.
 
-![Architecture Diagram](link-to-architecture-diagram)
+### Updated Architecture Diagram
+
+![Architecture Diagram](link-to-updated-architecture-diagram)
+
+The updated architecture diagram illustrates the following components:
+
+- **Bastion Host (EC2 t3.xlarge)**: Acts as the entry point for JMeter load tests. It stores and submits JMeter scripts to simulate various load conditions.
+- **API Gateway**: Routes incoming requests to the appropriate API services deployed either on Kubernetes Pods or EC2 instances.
+- **API Services (Java Spring Boot)**:
+  - Deployed on Kubernetes Pods (min: 2, max: 4 pods) with auto-scaling based on CPU usage or on AWS EC2 m5.2xlarge instances with an Elastic Load Balancer (ELB).
+  - Supports CRUD operations (`Create`, `Update`, `Delete`, `Get All`, `GetById`).
+- **PostgreSQL Database (Amazon RDS)**:
+  - Database name: `trade_book_db`.
+  - Handles few write operations and heavy read operations, particularly on `table_customer` and `table_customer_trade_book`.
+- **Redis Cache (AWS ElastiCache)**:
+  - Utilized for caching read operations to improve performance.
+- **Monitoring and Logging**:
+  - Managed using Amazon CloudWatch and Amazon Managed Grafana for monitoring API Gateway, Kubernetes Pods, PostgreSQL, and Redis Cache.
+  - Logs managed for AWS services, including EC2, EKS, and Beanstalk.
 
 ## Repository Overview
 
@@ -63,3 +81,14 @@ This repository contains configurations and scripts for monitoring the load test
 
 5. **Monitor Performance**: Monitor the performance and logs using configurations from the `trade-book-load-test-monitoring` repository.
 
+## Contributing
+
+We welcome contributions to enhance the project. Please follow the guidelines provided in the `CONTRIBUTING.md` file for submitting pull requests, reporting issues, or providing feedback.
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for more details.
+
+## Contact
+
+For any questions or support, please reach out to [your email] or open an issue in the respective repository.
