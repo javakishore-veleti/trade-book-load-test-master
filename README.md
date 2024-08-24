@@ -21,7 +21,7 @@ The architecture for the load testing setup is designed to evaluate the performa
 4. **Monitoring and Logging**:
    - Real-time monitoring using AWS CloudWatch, Grafana dashboards, and ELK Stack for comprehensive visibility into performance metrics.
 
-### Updated Architecture Diagram
+### Architecture Diagram
 
 ![Architecture Diagram](TradeBookCrudAPI-With-LoadTesting.png)
 
