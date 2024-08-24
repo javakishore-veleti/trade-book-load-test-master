@@ -23,7 +23,7 @@ The architecture for the load testing setup is designed to evaluate the performa
 
 ### Updated Architecture Diagram
 
-![Architecture Diagram](link-to-updated-architecture-diagram)
+![Architecture Diagram](TradeBookCrudAPI-With-LoadTesting.png)
 
 The updated architecture diagram illustrates the following components:
 
